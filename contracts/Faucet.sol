@@ -7,11 +7,9 @@ contract Faucet {
     address public owner;
     uint256 public maxAmount = 0.1 ether;
     event sent(address indexed to, uint256 amount);
-
     constructor() {
         owner = msg.sender;
     }
-
     receive() external payable {}
     function getBalance() public view returns (uint256) {
         return address(this).balance;
