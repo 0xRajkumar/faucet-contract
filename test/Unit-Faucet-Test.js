@@ -1,8 +1,6 @@
+const {assert} = require('chai');
 const chai = require('chai');
 const BN = require('bn.js');
-// const { ethers } = require('ethers');
-
-// Enable and inject BN dependency
 chai.use(require('chai-bn')(BN));
 
 describe("Faucet unit test", () => {
@@ -14,6 +12,6 @@ describe("Faucet unit test", () => {
         await this.faucet.deployed()
     })
     it("is contract deployed succesfully?", async () => {
-        console.log(this.faucet.address)
+        assert(this.faucet.address !== '', 'Not deployed')
     })
 })
