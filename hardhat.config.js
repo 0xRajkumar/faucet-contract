@@ -4,9 +4,8 @@ require("@nomiclabs/hardhat-waffle");
 const INFURA_KEY = process.env.INFURA_KEY
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 
-
 module.exports = {
-  defaultNetwork: "kovan",
+  defaultNetwork: "hardhat",
   solidity: "0.8.4",
   paths: {
     artifacts: './src/artifacts',
